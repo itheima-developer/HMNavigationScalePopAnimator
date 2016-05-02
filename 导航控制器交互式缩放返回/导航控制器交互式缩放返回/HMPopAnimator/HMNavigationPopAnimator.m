@@ -16,19 +16,24 @@
     UIPercentDrivenInteractiveTransition *_popInteractiveAnimator;
 }
 
-- (instancetype)initWithNavigationController:(UINavigationController *)nav parentView:(UIView *)parentView tabBarHidden:(BOOL)tabBarHidden; {
+- (instancetype)initWithParentView:(UIView *)parentView tabBarHidden:(BOOL)tabBarHidden; {
     
     self = [super init];
     if (self) {
-        _navigationController = nav;
         _parentSnapView = parentView;
         _tabBarHidden = tabBarHidden;
-        
-        UIScreenEdgePanGestureRecognizer *screenPanRecognizer = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(handleScreenEdgePan:)];
-        screenPanRecognizer.edges = UIRectEdgeLeft;
-        [_navigationController.view addGestureRecognizer:screenPanRecognizer];
     }
     return self;
+}
+
+- (void)setNavigationControllerDelegate:(UINavigationController *)navigationController {
+    _navigationController = navigationController;
+    
+    UIScreenEdgePanGestureRecognizer *screenPanRecognizer = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(handleScreenEdgePan:)];
+    screenPanRecognizer.edges = UIRectEdgeLeft;
+    [_navigationController.view addGestureRecognizer:screenPanRecognizer];
+    
+    _navigationController.delegate = self;
 }
 
 - (void)dealloc {

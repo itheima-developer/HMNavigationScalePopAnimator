@@ -22,13 +22,14 @@
     
     self.view.backgroundColor = [UIColor greenColor];
     self.title = @"第3个";
+    
+    _popAnimator = [[HMNavigationPopAnimator alloc] initWithParentView:_parentView tabBarHidden:YES];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    _popAnimator = [[HMNavigationPopAnimator alloc] initWithNavigationController:self.navigationController parentView:_parentView tabBarHidden:YES];
-    self.navigationController.delegate = _popAnimator;
+    [_popAnimator setNavigationControllerDelegate:self.navigationController];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {

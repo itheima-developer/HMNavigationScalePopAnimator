@@ -13,11 +13,15 @@
 
 /// 使用导航控制器实例化 POP 转场动画器
 ///
-/// @param nav          导航控制器
 /// @param parentView   父视图截图
 /// @param tabBarHidden 是否隐藏 TabBar
 ///
 /// @return POP 转场动画器
-- (instancetype)initWithNavigationController:(UINavigationController *)nav parentView:(UIView *)parentView tabBarHidden:(BOOL)tabBarHidden;
+- (instancetype)initWithParentView:(UIView *)parentView tabBarHidden:(BOOL)tabBarHidden;
+
+/// 设置导航控制器代理
+///
+/// @param navigationController 导航控制器
+- (void)setNavigationControllerDelegate:(UINavigationController *)navigationController;
 
 @end

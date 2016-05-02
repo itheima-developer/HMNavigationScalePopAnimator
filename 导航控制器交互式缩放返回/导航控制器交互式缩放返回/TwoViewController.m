@@ -25,14 +25,14 @@
     self.view.backgroundColor = [UIColor blueColor];
     self.title = @"第2个";
     
+    _popAnimator = [[HMNavigationPopAnimator alloc] initWithParentView:_parentView tabBarHidden:NO];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"第3个" style:UIBarButtonItemStylePlain target:self action:@selector(clickNextButton)];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    _popAnimator = [[HMNavigationPopAnimator alloc] initWithNavigationController:self.navigationController parentView:_parentView tabBarHidden:NO];
-    self.navigationController.delegate = _popAnimator;
+    [_popAnimator setNavigationControllerDelegate:self.navigationController];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
