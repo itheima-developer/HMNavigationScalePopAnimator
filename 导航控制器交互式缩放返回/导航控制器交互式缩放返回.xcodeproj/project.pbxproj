@@ -11,6 +11,10 @@
 		C2DAA0BA1CD6D80C00E6961E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2DAA0B91CD6D80C00E6961E /* AppDelegate.m */; };
 		C2DAA0C21CD6D80C00E6961E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2DAA0C11CD6D80C00E6961E /* Assets.xcassets */; };
 		C2DAA0C51CD6D80C00E6961E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2DAA0C31CD6D80C00E6961E /* LaunchScreen.storyboard */; };
+		C2DAA0D21CD6D86600E6961E /* OneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2DAA0CD1CD6D86600E6961E /* OneViewController.m */; };
+		C2DAA0D31CD6D86600E6961E /* ThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2DAA0CF1CD6D86600E6961E /* ThreeViewController.m */; };
+		C2DAA0D41CD6D86600E6961E /* TwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2DAA0D11CD6D86600E6961E /* TwoViewController.m */; };
+		C2DAA0D81CD6D8B000E6961E /* HMNavigationPopAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = C2DAA0D71CD6D8B000E6961E /* HMNavigationPopAnimator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +25,14 @@
 		C2DAA0C11CD6D80C00E6961E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C2DAA0C41CD6D80C00E6961E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C2DAA0C61CD6D80C00E6961E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2DAA0CC1CD6D86600E6961E /* OneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneViewController.h; sourceTree = "<group>"; };
+		C2DAA0CD1CD6D86600E6961E /* OneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneViewController.m; sourceTree = "<group>"; };
+		C2DAA0CE1CD6D86600E6961E /* ThreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreeViewController.h; sourceTree = "<group>"; };
+		C2DAA0CF1CD6D86600E6961E /* ThreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThreeViewController.m; sourceTree = "<group>"; };
+		C2DAA0D01CD6D86600E6961E /* TwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoViewController.h; sourceTree = "<group>"; };
+		C2DAA0D11CD6D86600E6961E /* TwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoViewController.m; sourceTree = "<group>"; };
+		C2DAA0D61CD6D8B000E6961E /* HMNavigationPopAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMNavigationPopAnimator.h; sourceTree = "<group>"; };
+		C2DAA0D71CD6D8B000E6961E /* HMNavigationPopAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMNavigationPopAnimator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,8 +65,15 @@
 		C2DAA0B41CD6D80C00E6961E /* 导航控制器交互式缩放返回 */ = {
 			isa = PBXGroup;
 			children = (
+				C2DAA0D51CD6D89C00E6961E /* HMPopAnimator */,
 				C2DAA0B81CD6D80C00E6961E /* AppDelegate.h */,
 				C2DAA0B91CD6D80C00E6961E /* AppDelegate.m */,
+				C2DAA0CC1CD6D86600E6961E /* OneViewController.h */,
+				C2DAA0CD1CD6D86600E6961E /* OneViewController.m */,
+				C2DAA0D01CD6D86600E6961E /* TwoViewController.h */,
+				C2DAA0D11CD6D86600E6961E /* TwoViewController.m */,
+				C2DAA0CE1CD6D86600E6961E /* ThreeViewController.h */,
+				C2DAA0CF1CD6D86600E6961E /* ThreeViewController.m */,
 				C2DAA0C11CD6D80C00E6961E /* Assets.xcassets */,
 				C2DAA0C31CD6D80C00E6961E /* LaunchScreen.storyboard */,
 				C2DAA0C61CD6D80C00E6961E /* Info.plist */,
@@ -69,6 +88,15 @@
 				C2DAA0B61CD6D80C00E6961E /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C2DAA0D51CD6D89C00E6961E /* HMPopAnimator */ = {
+			isa = PBXGroup;
+			children = (
+				C2DAA0D61CD6D8B000E6961E /* HMNavigationPopAnimator.h */,
+				C2DAA0D71CD6D8B000E6961E /* HMNavigationPopAnimator.m */,
+			);
+			path = HMPopAnimator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,8 +168,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2DAA0D21CD6D86600E6961E /* OneViewController.m in Sources */,
 				C2DAA0BA1CD6D80C00E6961E /* AppDelegate.m in Sources */,
 				C2DAA0B71CD6D80C00E6961E /* main.m in Sources */,
+				C2DAA0D81CD6D8B000E6961E /* HMNavigationPopAnimator.m in Sources */,
+				C2DAA0D41CD6D86600E6961E /* TwoViewController.m in Sources */,
+				C2DAA0D31CD6D86600E6961E /* ThreeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
